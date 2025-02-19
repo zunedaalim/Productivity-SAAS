@@ -9,10 +9,8 @@ export const Hero = () => {
       <div className="container">
         <div className="md:flex items-center justify-between">
           <div className="md:w-[478px]">
-            <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">
-              Version 2.0 is Here
-            </div>
-            <h1 className="text-10xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">
+            <div className="tag">Version 2.0 is Here</div>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">
               Pathway to productivity
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6 ">
@@ -30,6 +28,7 @@ export const Hero = () => {
           </div>
           <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
             <Image
+              draggable="false"
               src={cogImage}
               alt="cog"
               width={500}
@@ -37,12 +36,14 @@ export const Hero = () => {
               className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0"
             ></Image>
             <Image
+              draggable="false"
               src={cylinderImage}
               alt={"Cylinder Image"}
               width={220}
               className="hidden md:block -top-8 -left-32 md:absolute"
             ></Image>
             <Image
+              draggable="false"
               src={noodleImage}
               alt="Noodle Image"
               width={220}
