@@ -14,9 +14,9 @@ export const Hero = () => {
               Pathway to productivity
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6 ">
-              Celebrate the joy of accomplishment with an app designed to track
-              your progress, motivate your efforts, and celebrate your
-              successes.
+              Find Joy in Your Progress. Our app makes tracking your
+              achievements, staying motivated, and celebrating your successes
+              genuinely rewarding..
             </p>
             <div className="flex gap-1 items-center mt-[30px] ">
               <button className="btn btn-primary">Get for free</button>
