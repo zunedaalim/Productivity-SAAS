@@ -41,7 +41,7 @@ export const Hero = () => {
             <p className="text-xl text-[#010D3E] tracking-tight mt-6 ">
               Find Joy in Your Progress. Our app makes tracking your
               achievements, staying motivated, and celebrating your successes
-              genuinely rewarding..
+              genuinely rewarding.
             </p>
             <div className="flex gap-1 items-center mt-[30px] ">
               <button className="btn btn-primary">Get for free</button>
