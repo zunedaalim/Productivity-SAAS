@@ -21,12 +21,37 @@ export const Header = () => {
             <Image src={Logo} alt="Saas Logo" height={40} width={40}></Image>
             <MenuIcon className="h-5 w-5 md:hidden" />
             <nav className="hidden md:flex gap-4 text-black/65 items-center justify-between">
-              <a href="">About</a>
-              <a href="">Fearures</a>
-              <a href="">Customers</a>
-              <a href="">Updates</a>
-              <a href="">Help</a>
-              <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight">
+              <a
+                href="#about"
+                className="transition duration-300 ease-in-out transform hover:text-black "
+              >
+                About
+              </a>
+              <a
+                href="#features"
+                className="transition duration-300 ease-in-out transform hover:text-black "
+              >
+                Features
+              </a>
+              <a
+                href="#customers"
+                className="transition duration-300 ease-in-out transform hover:text-black "
+              >
+                Customers
+              </a>
+              <a
+                href="#pricing"
+                className="transition duration-300 ease-in-out transform hover:text-black "
+              >
+                Pricing
+              </a>
+              <a
+                href="#signup"
+                className="transition duration-300 ease-in-out transform hover:text-black "
+              >
+                Help
+              </a>
+              <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight transition-all duration-300 ease-in-out hover:scale-105 hover:ring-2 hover:ring-white">
                 Get for free
               </button>
             </nav>

@@ -20,14 +20,9 @@ export const Hero = () => {
 
   const translateY = useTransform(scrollYProgress, [0, 1], [200, -200]);
 
-  // To Track scrollY positions
-  // const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
-  // useMotionValueEvent(translateY, "change", (latestValue) =>
-  //   console.log(latestValue)
-  // );
-
   return (
     <section
+      id="about"
       ref={heroRef}
       className=" pt-8 pb-20 md:pt-5 md:pb-10  bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip"
     >
@@ -35,7 +30,7 @@ export const Hero = () => {
         <div className="md:flex items-center justify-between">
           <div className="md:w-[478px]">
             <div className="tag">Version 2.0 is Here</div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5 ">
               Pathway to productivity
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6 ">
@@ -57,14 +52,23 @@ export const Hero = () => {
               src={cogImage.src}
               alt="cog"
               className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0 "
+              initial={{
+                opacity: 0,
+                translateY: -30,
+              }}
               animate={{
+                opacity: 1,
                 translateY: [-30, 30],
               }}
               transition={{
-                repeat: Infinity,
-                repeatType: "mirror",
-                duration: 3,
-                ease: "easeInOut",
+                opacity: { duration: 0.3 },
+                translateY: {
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                  duration: 3,
+                  ease: "easeInOut",
+                },
+                y: { type: "spring", stiffness: 100 },
               }}
             ></motion.img>
             <motion.img
@@ -73,20 +77,48 @@ export const Hero = () => {
               alt={"Cylinder Image"}
               width={220}
               height={220}
-              className="hidden md:block -top-8 -left-32 md:absolute"
-              style={{
-                translateY: translateY,
+              className="hidden md:block md:absolute"
+              initial={{
+                opacity: 0,
+                y: 0,
               }}
-            ></motion.img>
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              style={{
+                top: "-2rem",
+                left: "-8rem",
+                y: translateY,
+              }}
+              transition={{
+                opacity: { duration: 0.3 },
+                y: { type: "spring", stiffness: 100 },
+              }}
+            />
             <motion.img
               draggable="false"
               src={noodleImage.src}
               alt="Noodle Image"
               width={220}
-              className=" hidden lg:block rotate-[30deg] absolute top-[524px] left-[448px]"
-              style={{
+              className="hidden lg:block absolute"
+              initial={{
+                opacity: 0,
                 rotate: 30,
-                translateY: translateY,
+                y: 0,
+              }}
+              animate={{
+                opacity: 1,
+                rotate: 30,
+              }}
+              style={{
+                top: "524px",
+                left: "448px",
+                y: translateY,
+              }}
+              transition={{
+                opacity: { duration: 0.3 },
+                y: { type: "spring", stiffness: 100 },
               }}
             ></motion.img>
           </div>

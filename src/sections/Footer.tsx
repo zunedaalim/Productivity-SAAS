@@ -7,7 +7,10 @@ import SocialPin from "@/assets/social-pin.svg";
 import SocialYoutube from "@/assets/social-youtube.svg";
 export const Footer = () => {
   return (
-    <footer className="bg-black text-[#BCBCBC] text-sm py-10 text-center">
+    <footer
+      id="footer"
+      className="bg-black text-[#BCBCBC] text-sm py-10 text-center"
+    >
       <div className="container">
         <div className="inline-flex relative before:content-['']  before:bottom-0 before:blur before:w-full before:h-full before:bg-[linear-gradient(to_right,#F87BFF,#FB92CF,#FFDD9B,#C2F0B1,#2FD8FE)] before:absolute">
           <Image
@@ -33,7 +36,7 @@ export const Footer = () => {
           <SocialYoutube />
         </div>
         <p className="mt-6">
-          &copy; 2025 Your Company, Inc. All rights reserved.
+          &copy; 2025 zunedaalim.com, Inc. All rights reserved.
         </p>
       </div>
     </footer>

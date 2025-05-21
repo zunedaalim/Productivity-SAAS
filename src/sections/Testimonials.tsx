@@ -91,6 +91,7 @@ const TestimonialColumn = (props: {
         repeatType: "loop",
       }}
       className="flex flex-col gap-6 pb-6 mt-10 "
+      id="customers"
     >
       {[...new Array(2)].fill(0).map((_, index) => {
         return (
